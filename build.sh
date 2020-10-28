@@ -1,4 +1,3 @@
 #!/bin/bash
-docker build -t webhook-listener:test .
-docker build -t nexus:18444/webhook-listener:test14 .
-docker push nexus:18444/webhook-listener:test14
+docker build -t host.docker.internal:19447/michaelmworthington/webhook-test:v2.7.0 .
+docker push host.docker.internal:19447/michaelmworthington/webhook-test:v2.7.0

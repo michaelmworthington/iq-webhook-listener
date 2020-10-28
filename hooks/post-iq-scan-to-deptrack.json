@@ -1,0 +1,34 @@
+[
+  {
+    "id": "post-iq-scan-to-deptrack",
+    "execute-command": "/etc/webhook/post-iq-scan-to-deptrack.sh",
+    "pass-arguments-to-command":  [
+      {
+        "source": "entire-payload"
+      },
+      {
+        "source": "entire-headers"
+      },
+      {
+        "source": "header",
+        "name": "x-nexus-webhook-id"
+      },
+      {
+        "source": "payload",
+        "name": "applicationEvaluation.application.publicId"
+      },
+      {
+        "source": "payload",
+        "name": "applicationEvaluation.application.id"
+      },
+      {
+        "source": "payload",
+        "name": "applicationEvaluation.stage"
+      },
+      {
+        "source": "payload",
+        "name": "applicationEvaluation.reportId"
+      },
+    ],
+  }
+]
